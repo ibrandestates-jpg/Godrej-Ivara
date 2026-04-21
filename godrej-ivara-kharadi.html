@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Godrej Ivara Kharadi — Premium 2, 3 & 4 BHK Residences in Pune</title>
+<meta name="description" content="Godrej Ivara, Kharadi — premium 2, 3 & 4 BHK residences by Godrej Properties in Pune. MahaRERA registered. Starting ₹1.25 Cr. Register your interest." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #14110f;
+    --ink-soft: #2a2420;
+    --cream: #f3ece0;
+    --cream-soft: #e8dfce;
+    --paper: #faf6ed;
+    --brass: #b58a4a;
+    --brass-deep: #8a6731;
+    --brass-light: #d6b787;
+    --sage: #6b7a5a;
+    --line: rgba(181, 138, 74, 0.28);
+    --line-soft: rgba(243, 236, 224, 0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--ink);
+    color: var(--cream);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, .display {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  .container {
+    width: min(1280px, 100% - 3rem);
+    margin-inline: auto;
+  }
+
+  /* ——— NAVIGATION ——— */
+  .nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1rem 0;
+    backdrop-filter: blur(12px);
+    background: rgba(20, 17, 15, 0.72);
+    border-bottom: 1px solid var(--line-soft);
+    transition: padding .35s ease, background .3s ease;
+  }
+  .nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+  }
+  .brand__logo {
+    height: 38px;
+    width: auto;
+    display: block;
+  }
+  .brand__sep {
+    width: 1px;
+    height: 28px;
+    background: var(--line);
+  }
+  .brand__name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.32em;
+    font-weight: 500;
+    color: var(--cream);
+    line-height: 1;
+  }
+  .brand__name em {
+    display: block;
+    font-style: italic;
+    color: var(--brass-light);
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
+    margin-top: 0.35rem;
+    font-weight: 300;
+  }
+  .nav__links {
+    display: flex;
+    gap: 2.2rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+  .nav__links a {
+    opacity: 0.82;
+    transition: opacity .25s ease, color .25s ease;
+  }
+  .nav__links a:hover { opacity: 1; color: var(--brass-light); }
+  .nav__cta {
+    padding: 0.65rem 1.3rem;
+    border: 1px solid var(--brass);
+    color: var(--brass-light);
+    font-size: 0.72rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    cursor: pointer;
+    background: transparent;
+    font-family: inherit;
+  }
+  .nav__cta:hover { background: var(--brass); color: var(--ink); }
+
+  @media (max-width: 960px) {
+    .nav__links { display: none; }
+  }
+  @media (max-width: 520px) {
+    .brand__name { font-size: 0.95rem; letter-spacing: 0.22em; }
+    .brand__logo { height: 32px; }
+  }
+
+  /* ——— HERO with SLIDER ——— */
+  .hero {
+    min-height: 100vh;
+    position: relative;
+    padding: 7rem 0 4rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #0e0b09;
+  }
+  .hero__slides {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .hero__slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: scale(1.06);
+    transition: opacity 1.4s ease, transform 7s ease-out;
+  }
+  .hero__slide.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .hero__slide::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(14,11,9,0.85) 0%, rgba(14,11,9,0.55) 45%, rgba(14,11,9,0.3) 100%),
+      linear-gradient(180deg, rgba(14,11,9,0.25) 0%, rgba(14,11,9,0.7) 100%);
+  }
+  .hero__dots {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.7rem;
+    z-index: 3;
+  }
+  .hero__dot {
+    width: 36px;
+    height: 2px;
+    background: rgba(243, 236, 224, 0.3);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background .3s ease;
+  }
+  .hero__dot.active { background: var(--brass-light); }
+
+  .hero__grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  .hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    color: var(--brass-light);
+    margin-bottom: 1.8rem;
+  }
+  .hero__eyebrow::before {
+    content: '';
+    width: 2.2rem;
+    height: 1px;
+    background: var(--brass);
+  }
+  .hero h1 {
+    font-size: clamp(2.6rem, 5.8vw, 5rem);
+    line-height: 1.05;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    color: var(--cream);
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--brass-light);
+    font-weight: 400;
+  }
+  .hero__sub {
+    font-size: 1.02rem;
+    color: rgba(243, 236, 224, 0.8);
+    max-width: 32rem;
+    margin-bottom: 2.2rem;
+    line-height: 1.7;
+  }
+  .hero__meta {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    padding-top: 1.8rem;
+    border-top: 1px solid var(--line);
+  }
+  .hero__meta > div { min-width: 7rem; }
+  .hero__meta .label {
+    font-size: 0.68rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--brass-light);
+    margin-bottom: 0.4rem;
+    opacity: 0.8;
+  }
+  .hero__meta .value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.45rem;
+    color: var(--cream);
+  }
+
+  .interest-card {
+    background: linear-gradient(155deg, rgba(20, 17, 15, 0.82), rgba(30, 25, 21, 0.88));
+    border: 1px solid var(--line);
+    padding: 2.3rem 2.2rem;
+    position: relative;
+    backdrop-filter: blur(14px);
+  }
+  .interest-card::before, .interest-card::after {
+    content: '';
+    position: absolute;
+    width: 14px; height: 14px;
+    border: 1px solid var(--brass);
+  }
+  .interest-card::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+  .interest-card::after { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+  .interest-card h3 {
+    font-size: 1.7rem;
+    margin-bottom: 0.3rem;
+  }
+  .interest-card h3 em { color: var(--brass-light); font-style: italic; }
+  .interest-card p {
+    font-size: 0.82rem;
+    color: rgba(243, 236, 224, 0.65);
+    margin-bottom: 1.5rem;
+  }
+  .field { margin-bottom: 1rem; }
+  .field label {
+    display: block;
+    font-size: 0.66rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--brass-light);
+    margin-bottom: 0.5rem;
+    opacity: 0.85;
+  }
+  .field input, .field select {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--line);
+    color: var(--cream);
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 300;
+    padding: 0.5rem 0;
+    outline: none;
+    transition: border-color .25s ease;
+  }
+  .field select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23b58a4a' stroke-width='1.2' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.2rem center;
+    cursor: pointer;
+  }
+  .field select option { background: var(--ink); color: var(--cream); }
+  .field input:focus, .field select:focus { border-color: var(--brass); }
+  .field input::placeholder { color: rgba(243, 236, 224, 0.35); }
+  .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .btn-primary {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 0.8rem;
+    background: var(--brass);
+    color: var(--ink);
+    border: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.76rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background .25s ease;
+  }
+  .btn-primary:hover { background: var(--brass-light); }
+  .consent {
+    font-size: 0.66rem;
+    color: rgba(243, 236, 224, 0.45);
+    margin-top: 0.9rem;
+    line-height: 1.55;
+  }
+
+  @media (max-width: 900px) {
+    .hero__grid { grid-template-columns: 1fr; gap: 3rem; }
+    .hero { padding-top: 8rem; }
+  }
+
+  /* ——— SECTION BASE ——— */
+  section { padding: 7rem 0; position: relative; }
+  .section-head {
+    text-align: center;
+    margin-bottom: 4.5rem;
+  }
+  .section-head .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--brass);
+    margin-bottom: 1.2rem;
+    display: inline-block;
+  }
+  .section-head h2 {
+    font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+    line-height: 1.15;
+    max-width: 42rem;
+    margin: 0 auto;
+  }
+  .section-head h2 em { font-style: italic; color: var(--brass-light); }
+  .section-head .lead {
+    max-width: 38rem;
+    margin: 1.5rem auto 0;
+    color: rgba(243, 236, 224, 0.65);
+    font-size: 1.02rem;
+  }
+  .ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 auto 1.8rem;
+    color: var(--brass);
+  }
+  .ornament span { width: 3rem; height: 1px; background: var(--brass); opacity: 0.6; }
+  .ornament svg { width: 14px; height: 14px; }
+
+  /* ——— OVERVIEW ——— */
+  .overview {
+    background: linear-gradient(180deg, var(--ink) 0%, #181411 100%);
+  }
+  .overview__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    margin-top: 4rem;
+  }
+  .stat {
+    background: var(--ink);
+    padding: 2.5rem 1.8rem;
+    text-align: center;
+  }
+  .stat .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--brass-light);
+    line-height: 1;
+    margin-bottom: 0.7rem;
+  }
+  .stat .num em { font-style: italic; font-size: 0.65em; }
+  .stat .lbl {
+    font-size: 0.72rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: rgba(243, 236, 224, 0.6);
+  }
+  @media (max-width: 720px) {
+    .overview__grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* ——— CONFIGURATIONS ——— */
+  .configs {
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .configs .section-head h2 { color: var(--ink); }
+  .configs .section-head h2 em { color: var(--brass-deep); }
+  .configs .section-head .eyebrow { color: var(--brass-deep); }
+  .configs .section-head .lead { color: rgba(20, 17, 15, 0.65); }
+  .configs .ornament { color: var(--brass-deep); }
+  .configs .ornament span { background: var(--brass-deep); }
+
+  .config-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .config {
+    background: #fff;
+    border: 1px solid rgba(20, 17, 15, 0.08);
+    padding: 0 2rem 2.5rem;
+    position: relative;
+    transition: transform .4s ease, box-shadow .4s ease;
+    overflow: hidden;
+  }
+  .config:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px -20px rgba(20, 17, 15, 0.18);
+  }
+  .config__plan {
+    position: relative;
+    margin: 0 -2rem 1.8rem;
+    aspect-ratio: 16 / 10;
+    background: #efe7d8;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(20, 17, 15, 0.1);
+    cursor: pointer;
+  }
+  .config__plan > svg.plan-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    filter: blur(5.5px);
+    opacity: 0.85;
+    transition: filter .5s ease, opacity .5s ease, transform .6s ease;
+  }
+  .config__plan:hover > svg.plan-svg {
+    filter: blur(3.5px);
+    opacity: 0.95;
+    transform: scale(1.03);
+  }
+  .config__plan::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at center, transparent 10%, rgba(239, 231, 216, 0.35) 75%),
+      linear-gradient(180deg, rgba(239, 231, 216, 0.1) 0%, rgba(239, 231, 216, 0.35) 100%);
+    pointer-events: none;
+  }
+  .config__plan .lock-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem;
+    z-index: 2;
+    transition: transform .35s ease;
+  }
+  .config__plan:hover .lock-overlay { transform: scale(1.04); }
+  .lock-icon {
+    width: 42px; height: 42px;
+    border: 1px solid var(--brass-deep);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(250, 246, 237, 0.92);
+    backdrop-filter: blur(3px);
+  }
+  .lock-icon svg { width: 17px; height: 17px; stroke: var(--brass-deep); stroke-width: 1.4; fill: none; }
+  .unlock-label {
+    font-size: 0.66rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--brass-deep);
+    background: rgba(250, 246, 237, 0.92);
+    backdrop-filter: blur(3px);
+    padding: 0.55rem 1.1rem;
+    border: 1px solid rgba(138, 103, 49, 0.3);
+    font-weight: 500;
+  }
+
+  .config__tag {
+    font-size: 0.68rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--brass-deep);
+    margin-bottom: 0.9rem;
+  }
+  .config h3 {
+    font-size: 2.4rem;
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .config h3 em { font-style: italic; color: var(--brass-deep); }
+  .config .size {
+    font-size: 0.9rem;
+    color: rgba(20, 17, 15, 0.55);
+    margin-bottom: 1.6rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid rgba(20, 17, 15, 0.1);
+  }
+  .config ul { list-style: none; margin-bottom: 1.8rem; }
+  .config ul li {
+    font-size: 0.92rem;
+    padding: 0.45rem 0;
+    color: rgba(20, 17, 15, 0.72);
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+  .config ul li::before {
+    content: '';
+    width: 4px; height: 4px;
+    background: var(--brass-deep);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .config__price {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(20, 17, 15, 0.5);
+    margin-bottom: 0.3rem;
+    padding-top: 1rem;
+    border-top: 1px dashed rgba(20, 17, 15, 0.15);
+  }
+  .config__price strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    color: var(--ink);
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+    display: block;
+    margin-top: 0.25rem;
+  }
+  .config__price strong em {
+    font-style: normal;
+    font-size: 0.55em;
+    color: rgba(20, 17, 15, 0.55);
+    font-weight: 400;
+    margin-left: 0.4rem;
+    letter-spacing: 0.05em;
+  }
+  .config__cta-btn {
+    width: 100%;
+    margin-top: 1.3rem;
+    padding: 0.95rem;
+    background: var(--ink);
+    color: var(--cream);
+    border: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background .25s ease;
+  }
+  .config__cta-btn:hover { background: var(--brass-deep); }
+  .config__note {
+    font-size: 0.68rem;
+    color: rgba(20, 17, 15, 0.45);
+    margin-top: 0.8rem;
+    text-align: center;
+    font-style: italic;
+  }
+  @media (max-width: 860px) {
+    .config-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ——— MASTER PLAN ——— */
+  .masterplan {
+    background: linear-gradient(180deg, var(--ink) 0%, #1a1614 100%);
+  }
+  .masterplan__wrap {
+    position: relative;
+    border: 1px solid var(--line);
+    background: #1a1614;
+    padding: 1rem;
+  }
+  .masterplan__wrap::before, .masterplan__wrap::after {
+    content: '';
+    position: absolute;
+    width: 22px; height: 22px;
+    border: 1px solid var(--brass);
+  }
+  .masterplan__wrap::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+  .masterplan__wrap::after { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+  .masterplan__img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background:
+      linear-gradient(135deg, #f3ece0 0%, #e0d4bc 100%);
+  }
+  .masterplan__legend {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .legend-item {
+    background: var(--ink);
+    padding: 1.6rem 1.4rem;
+  }
+  .legend-item h5 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    color: var(--brass-light);
+    font-style: italic;
+    margin-bottom: 0.8rem;
+  }
+  .legend-item ul {
+    list-style: none;
+    font-size: 0.82rem;
+    color: rgba(243, 236, 224, 0.65);
+  }
+  .legend-item ul li {
+    padding: 0.25rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .legend-item ul li::before {
+    content: '·';
+    color: var(--brass);
+    font-size: 1.2rem;
+    line-height: 0;
+  }
+  @media (max-width: 860px) {
+    .masterplan__legend { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 520px) {
+    .masterplan__legend { grid-template-columns: 1fr; }
+  }
+
+  /* ——— AMENITIES ——— */
+  .amenities {
+    background: linear-gradient(180deg, #181411 0%, var(--ink) 100%);
+  }
+  .amenity-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .amenity {
+    background: var(--ink);
+    padding: 2.2rem 1.8rem;
+    transition: background .35s ease;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .amenity:hover { background: #1e1915; }
+  .amenity svg {
+    width: 32px; height: 32px;
+    color: var(--brass);
+    margin-bottom: 1.4rem;
+    stroke-width: 1;
+  }
+  .amenity h4 {
+    font-size: 1.25rem;
+    color: var(--cream);
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+  }
+  .amenity p {
+    font-size: 0.82rem;
+    color: rgba(243, 236, 224, 0.5);
+    line-height: 1.55;
+  }
+  @media (max-width: 900px) { .amenity-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 500px) { .amenity-grid { grid-template-columns: 1fr; } }
+
+  /* ——— LOCATION ——— */
+  .location {
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .location .section-head h2 { color: var(--ink); }
+  .location .section-head h2 em { color: var(--brass-deep); }
+  .location .section-head .eyebrow { color: var(--brass-deep); }
+  .location .section-head .lead { color: rgba(20, 17, 15, 0.65); }
+  .location .ornament { color: var(--brass-deep); }
+  .location .ornament span { background: var(--brass-deep); }
+
+  .loc-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .loc-map {
+    background: linear-gradient(135deg, #1a1614, #2a2420);
+    aspect-ratio: 4/3;
+    border: 1px solid rgba(20, 17, 15, 0.12);
+    position: relative;
+    overflow: hidden;
+  }
+  .loc-map svg { width: 100%; height: 100%; }
+  .loc-pin {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    background: var(--brass);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 8px rgba(181, 138, 74, 0.2), 0 0 0 20px rgba(181, 138, 74, 0.1);
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+  .loc-pin::after {
+    content: 'GODREJ IVARA';
+    position: absolute;
+    top: calc(100% + 14px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.28em;
+    color: var(--cream);
+    white-space: nowrap;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 8px rgba(181, 138, 74, 0.2), 0 0 0 20px rgba(181, 138, 74, 0.1); }
+    50% { box-shadow: 0 0 0 14px rgba(181, 138, 74, 0.25), 0 0 0 32px rgba(181, 138, 74, 0.08); }
+  }
+  .loc-list h3 {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+  }
+  .loc-list h3 em { font-style: italic; color: var(--brass-deep); }
+  .loc-list .tagline {
+    color: rgba(20, 17, 15, 0.6);
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+  }
+  .loc-list ul { list-style: none; }
+  .loc-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1rem 0;
+    border-bottom: 1px dashed rgba(20, 17, 15, 0.15);
+    font-size: 0.96rem;
+  }
+  .loc-list li span:first-child { color: rgba(20, 17, 15, 0.78); }
+  .loc-list li span:last-child {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    color: var(--brass-deep);
+    font-style: italic;
+  }
+  @media (max-width: 860px) {
+    .loc-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ——— CTA BAND ——— */
+  .cta-band {
+    padding: 6rem 0;
+    background:
+      radial-gradient(ellipse at center, rgba(181, 138, 74, 0.12), transparent 70%),
+      linear-gradient(180deg, var(--ink) 0%, #1a1614 100%);
+    text-align: center;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .cta-band h2 {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    line-height: 1.1;
+    max-width: 40rem;
+    margin: 0 auto 1.5rem;
+  }
+  .cta-band h2 em { font-style: italic; color: var(--brass-light); }
+  .cta-band p {
+    color: rgba(243, 236, 224, 0.65);
+    max-width: 32rem;
+    margin: 0 auto 2.5rem;
+  }
+  .cta-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    border: 1px solid var(--brass);
+    color: var(--brass-light);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    transition: all .3s ease;
+  }
+  .cta-phone:hover { background: var(--brass); color: var(--ink); }
+  .cta-phone svg { width: 20px; height: 20px; }
+
+  /* ——— RERA BAND ——— */
+  .rera-band {
+    background: #0e0b09;
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .rera-inner {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  .rera-qr {
+    width: 110px;
+    height: 110px;
+    background: #fff;
+    padding: 0.6rem;
+    border: 1px solid var(--line);
+  }
+  .rera-qr img { width: 100%; height: 100%; display: block; }
+  .rera-text h4 {
+    font-size: 0.72rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--brass-light);
+    margin-bottom: 0.5rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+  }
+  .rera-text p {
+    color: rgba(243, 236, 224, 0.7);
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+  .rera-text p strong {
+    color: var(--cream);
+    font-weight: 400;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    letter-spacing: 0.04em;
+    display: block;
+    margin-top: 0.3rem;
+  }
+  .rera-text a { color: var(--brass-light); border-bottom: 1px solid var(--line); }
+  .rera-badge {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--brass-light);
+    font-size: 1.1rem;
+    text-align: right;
+    line-height: 1.4;
+  }
+  .rera-badge small {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-style: normal;
+    font-size: 0.68rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: rgba(243, 236, 224, 0.5);
+    margin-bottom: 0.3rem;
+  }
+  @media (max-width: 780px) {
+    .rera-inner { grid-template-columns: auto 1fr; }
+    .rera-badge { grid-column: 1 / -1; text-align: left; }
+  }
+
+  /* ——— FOOTER ——— */
+  footer {
+    background: #0e0b09;
+    padding: 4rem 0 2rem;
+    border-top: 1px solid var(--line);
+  }
+  .foot-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .foot-grid h5 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--brass-light);
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+  }
+  .foot-grid p, .foot-grid a {
+    color: rgba(243, 236, 224, 0.55);
+    font-size: 0.88rem;
+    line-height: 1.8;
+  }
+  .foot-grid a:hover { color: var(--brass-light); }
+  .foot-about p { max-width: 22rem; }
+  .foot-about .brand { margin-bottom: 1rem; }
+
+  .disclaimer {
+    padding: 2rem 0 1rem;
+    font-size: 0.72rem;
+    line-height: 1.75;
+    color: rgba(243, 236, 224, 0.42);
+    text-align: justify;
+  }
+  .disclaimer strong { color: var(--brass-light); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.68rem; display: block; margin-bottom: 0.8rem; }
+  .copy {
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--line-soft);
+    font-size: 0.72rem;
+    color: rgba(243, 236, 224, 0.35);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  @media (max-width: 780px) {
+    .foot-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ——— ANIMATIONS ——— */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ——— MODALS ——— */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 8, 7, 0.82);
+    backdrop-filter: blur(6px);
+    z-index: 200;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+  .modal-backdrop.open { display: flex; }
+  .modal {
+    max-width: 460px;
+    width: 100%;
+    background: #1a1614;
+    border: 1px solid var(--line);
+    padding: 3rem 2.5rem 2.5rem;
+    position: relative;
+  }
+  .modal::before, .modal::after {
+    content: '';
+    position: absolute;
+    width: 18px; height: 18px;
+    border: 1px solid var(--brass);
+  }
+  .modal::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+  .modal::after { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+  .modal .close-x {
+    position: absolute;
+    top: 1rem; right: 1.2rem;
+    background: transparent;
+    border: none;
+    color: rgba(243, 236, 224, 0.5);
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-family: inherit;
+    line-height: 1;
+    padding: 0.3rem;
+    transition: color .2s ease;
+  }
+  .modal .close-x:hover { color: var(--brass-light); }
+  .modal h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+    text-align: center;
+  }
+  .modal h3 em { font-style: italic; color: var(--brass-light); }
+  .modal .sub {
+    color: rgba(243, 236, 224, 0.6);
+    margin-bottom: 1.8rem;
+    font-size: 0.88rem;
+    text-align: center;
+  }
+  .radio-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+  .radio-group label {
+    display: block;
+    text-align: center;
+    padding: 0.7rem 0.3rem;
+    border: 1px solid var(--line);
+    cursor: pointer;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    color: rgba(243, 236, 224, 0.7);
+    transition: all .2s ease;
+    font-weight: 400;
+    text-transform: none;
+    background: transparent;
+  }
+  .radio-group input { display: none; }
+  .radio-group input:checked + label {
+    background: var(--brass);
+    border-color: var(--brass);
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .radio-group label:hover { border-color: var(--brass); }
+
+  /* Success modal */
+  .success-modal { text-align: center; }
+  .success-modal .icon {
+    width: 60px; height: 60px;
+    border: 1px solid var(--brass);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.3rem;
+    color: var(--brass-light);
+  }
+  .success-modal button {
+    background: var(--brass);
+    color: var(--ink);
+    border: none;
+    padding: 0.9rem 2rem;
+    font-family: inherit;
+    font-size: 0.75rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 0.5rem;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav__inner">
+    <a href="#top" class="brand">
+      <img class="brand__logo" src="images/godrej-logo.png" alt="Godrej Properties" onerror="this.style.display='none'; this.nextElementSibling.style.display='none';"/>
+      <span class="brand__sep"></span>
+      <div class="brand__name">IVARA<em>Kharadi</em></div>
+    </a>
+    <div class="nav__links">
+      <a href="#overview">Overview</a>
+      <a href="#configs">Residences</a>
+      <a href="#masterplan">Master Plan</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#location">Location</a>
+    </div>
+    <button class="nav__cta" onclick="openUnitForm('')">Enquire Now</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <!-- background slider -->
+  <div class="hero__slides" id="heroSlides">
+    <div class="hero__slide active" style="background-image: url('images/hero-exterior.jpg');"></div>
+    <div class="hero__slide" style="background-image: url('images/hero-pool.jpg');"></div>
+    <div class="hero__slide" style="background-image: url('images/hero-masterplan.jpg');"></div>
+  </div>
+
+  <div class="container hero__grid">
+    <div class="hero__copy reveal">
+      <div class="hero__eyebrow">MahaRERA Registered · Kharadi, Pune</div>
+      <h1>Godrej <em>Ivara</em><br/>An address, <em>elevated.</em></h1>
+      <p class="hero__sub">A considered arrangement of 2, 3 &amp; 4 BHK residences across 12 acres in Kharadi — crafted by Godrej Properties around courtyards, daylight, and the unhurried rhythm of a well-lived life.</p>
+      <div class="hero__meta">
+        <div>
+          <div class="label">Starting</div>
+          <div class="value">₹ 1.25 Cr*</div>
+        </div>
+        <div>
+          <div class="label">Configurations</div>
+          <div class="value">2 · 3 · 4 BHK</div>
+        </div>
+        <div>
+          <div class="label">Land Parcel</div>
+          <div class="value">~12 Acres</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="interest-card reveal">
+      <h3>Register your <em>interest</em></h3>
+      <p>Be among the first invited to the site preview and pricing walk-through.</p>
+      <form action="https://formsubmit.co/ibrandestates@gmail.com" method="POST" onsubmit="return handleSubmit(event, this)">
+        <input type="hidden" name="_subject" value="Godrej Ivara Kharadi — New Enquiry from Website"/>
+        <input type="hidden" name="_template" value="table"/>
+        <input type="hidden" name="_captcha" value="false"/>
+        <input type="hidden" name="_next" value="#top"/>
+        <input type="hidden" name="Form Source" value="Hero Form"/>
+
+        <div class="field">
+          <label>Full name</label>
+          <input type="text" name="Name" required placeholder="e.g. Ananya Deshpande" />
+        </div>
+        <div class="row-2">
+          <div class="field">
+            <label>Phone</label>
+            <input type="tel" name="Phone" required pattern="[0-9+\s\-]{7,}" placeholder="+91 ..." />
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" name="Email" required placeholder="you@email.com" />
+          </div>
+        </div>
+        <div class="field">
+          <label>Preferred configuration</label>
+          <select name="Interest" required>
+            <option value="">Select —</option>
+            <option>2 BHK</option>
+            <option>3 BHK</option>
+            <option>4 BHK</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <button class="btn-primary" type="submit">Request Preview</button>
+        <p class="consent">By submitting, you consent to receive updates via phone and email. Information may be shared with RERA-registered developers for polling and interest generation.</p>
+      </form>
+    </div>
+  </div>
+
+  <div class="hero__dots" id="heroDots">
+    <button class="hero__dot active" data-slide="0" aria-label="Slide 1"></button>
+    <button class="hero__dot" data-slide="1" aria-label="Slide 2"></button>
+    <button class="hero__dot" data-slide="2" aria-label="Slide 3"></button>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="overview" id="overview">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="ornament">
+        <span></span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z"/></svg>
+        <span></span>
+      </div>
+      <div class="eyebrow">The Project</div>
+      <h2>A restrained architecture, <em>measured in detail.</em></h2>
+      <p class="lead">Eleven low-density towers with generous setbacks, courtyards that invite the breeze in, and a tree-lined promenade that makes the commute home feel like an arrival.</p>
+    </div>
+
+    <div class="overview__grid reveal">
+      <div class="stat"><div class="num">12<em>ac</em></div><div class="lbl">Land Parcel</div></div>
+      <div class="stat"><div class="num">11</div><div class="lbl">Residential Towers</div></div>
+      <div class="stat"><div class="num">6<em>ac</em></div><div class="lbl">Open &amp; Green</div></div>
+      <div class="stat"><div class="num">40<em>+</em></div><div class="lbl">Curated Amenities</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONFIGURATIONS -->
+<section class="configs" id="configs">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="ornament">
+        <span></span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="4" y="4" width="16" height="16"/><path d="M4 12 L20 12 M12 4 L12 20"/></svg>
+        <span></span>
+      </div>
+      <div class="eyebrow">Residences &amp; Pricing</div>
+      <h2>Three <em>proportions</em>, one sensibility.</h2>
+      <p class="lead">Each plan was drawn around how a home actually lives — where light falls in the morning, where conversation gathers in the evening, where silence is welcome.</p>
+    </div>
+
+    <div class="config-grid">
+      <!-- 2 BHK -->
+      <div class="config reveal">
+        <div class="config__plan" onclick="openUnitForm('2 BHK')">
+          <svg class="plan-svg" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="250" fill="#efe7d8"/>
+            <g fill="none" stroke="#2a2420" stroke-width="3"><rect x="40" y="40" width="320" height="170"/></g>
+            <g fill="none" stroke="#2a2420" stroke-width="1.8">
+              <line x1="40" y1="125" x2="200" y2="125"/><line x1="200" y1="40" x2="200" y2="210"/>
+              <line x1="140" y1="40" x2="140" y2="125"/><line x1="280" y1="125" x2="360" y2="125"/>
+              <line x1="200" y1="175" x2="280" y2="175"/><line x1="280" y1="175" x2="280" y2="210"/>
+            </g>
+            <g fill="none" stroke="#3a2f24" stroke-width="1">
+              <rect x="55" y="55" width="75" height="48" rx="2"/><line x1="55" y1="66" x2="130" y2="66"/>
+              <rect x="215" y="75" width="58" height="38" rx="2"/><line x1="215" y1="83" x2="273" y2="83"/>
+              <rect x="55" y="185" width="115" height="15" rx="1"/><rect x="55" y="155" width="20" height="30" rx="1"/>
+              <circle cx="145" cy="165" r="15"/><rect x="215" y="140" width="60" height="8"/>
+              <rect x="215" y="140" width="8" height="30"/><rect x="295" y="138" width="22" height="32" rx="2"/>
+              <circle cx="340" cy="155" r="8"/><rect x="215" y="185" width="22" height="20" rx="1"/>
+            </g>
+            <g font-family="Outfit, sans-serif" font-size="6.5" fill="#8a6731" text-anchor="middle">
+              <text x="92" y="115">MASTER BEDROOM</text><text x="244" y="120">BEDROOM 2</text>
+              <text x="120" y="145">LIVING · DINING</text><text x="245" y="160">KITCHEN</text>
+              <text x="318" y="150">BATH</text><text x="244" y="195">POWDER</text>
+            </g>
+          </svg>
+          <div class="lock-overlay">
+            <div class="lock-icon"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="1"/><path d="M8 11 V7 A 4 4 0 0 1 16 7 V11"/></svg></div>
+            <div class="unlock-label">Unlock Detailed Plan</div>
+          </div>
+        </div>
+        <div class="config__tag">Plan · A</div>
+        <h3>2 <em>BHK</em></h3>
+        <div class="size">Carpet 720 – 820 sq.ft.</div>
+        <ul>
+          <li>Double-aspect living room</li>
+          <li>Kitchen with utility deck</li>
+          <li>Master suite with walk-in</li>
+          <li>Full-height glazing</li>
+        </ul>
+        <div class="config__price">Starting
+          <strong>₹ 1.25 Cr. <em>onwards</em></strong>
+        </div>
+        <button class="config__cta-btn" onclick="openUnitForm('2 BHK')">Request Floor Plan</button>
+        <p class="config__note">GST, AMC, IFMS &amp; other charges additional*</p>
+      </div>
+
+      <!-- 3 BHK -->
+      <div class="config reveal" style="border-color:var(--brass-deep);">
+        <div class="config__plan" onclick="openUnitForm('3 BHK')">
+          <svg class="plan-svg" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="250" fill="#efe7d8"/>
+            <g fill="none" stroke="#2a2420" stroke-width="3">
+              <rect x="25" y="30" width="300" height="190"/><rect x="325" y="30" width="50" height="100"/>
+            </g>
+            <g fill="none" stroke="#2a2420" stroke-width="1.8">
+              <line x1="130" y1="30" x2="130" y2="135"/><line x1="230" y1="30" x2="230" y2="135"/>
+              <line x1="130" y1="135" x2="130" y2="220"/><line x1="230" y1="155" x2="230" y2="220"/>
+              <line x1="280" y1="135" x2="280" y2="220"/><line x1="25" y1="135" x2="325" y2="135"/>
+              <line x1="230" y1="85" x2="325" y2="85"/><line x1="130" y1="178" x2="230" y2="178"/>
+            </g>
+            <g fill="none" stroke="#3a2f24" stroke-width="1">
+              <rect x="40" y="45" width="78" height="52" rx="2"/><line x1="40" y1="58" x2="118" y2="58"/>
+              <rect x="40" y="108" width="85" height="20"/><rect x="150" y="45" width="62" height="42" rx="2"/>
+              <line x1="150" y1="54" x2="212" y2="54"/><rect x="150" y="145" width="62" height="28" rx="2"/>
+              <line x1="150" y1="153" x2="212" y2="153"/><rect x="145" y="200" width="130" height="15" rx="1"/>
+              <rect x="145" y="180" width="18" height="20" rx="1"/><ellipse cx="260" cy="168" rx="20" ry="11"/>
+              <rect x="245" y="45" width="70" height="10"/><rect x="245" y="45" width="10" height="35"/>
+              <rect x="245" y="95" width="20" height="32" rx="2"/><circle cx="300" cy="108" r="8"/>
+            </g>
+            <g font-family="Outfit, sans-serif" font-size="6" fill="#8a6731" text-anchor="middle">
+              <text x="80" y="138">MASTER SUITE</text><text x="181" y="105">BEDROOM 2</text>
+              <text x="181" y="163">BEDROOM 3</text><text x="210" y="192">GREAT ROOM</text>
+              <text x="260" y="148">DINING</text><text x="280" y="70">KITCHEN</text>
+              <text x="350" y="85">BALCONY</text>
+            </g>
+          </svg>
+          <div class="lock-overlay">
+            <div class="lock-icon"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="1"/><path d="M8 11 V7 A 4 4 0 0 1 16 7 V11"/></svg></div>
+            <div class="unlock-label">Unlock Detailed Plan</div>
+          </div>
+        </div>
+        <div class="config__tag">Plan · B &nbsp; · &nbsp; Most requested</div>
+        <h3>3 <em>BHK</em></h3>
+        <div class="size">Carpet 1,080 – 1,260 sq.ft.</div>
+        <ul>
+          <li>Wraparound sit-out balcony</li>
+          <li>Guest / study fourth room</li>
+          <li>Three bath configuration</li>
+          <li>Dedicated dining bay</li>
+        </ul>
+        <div class="config__price">Starting
+          <strong>₹ 1.59 Cr. <em>onwards</em></strong>
+        </div>
+        <button class="config__cta-btn" onclick="openUnitForm('3 BHK')">Request Floor Plan</button>
+        <p class="config__note">GST, AMC, IFMS &amp; other charges additional*</p>
+      </div>
+
+      <!-- 4 BHK -->
+      <div class="config reveal">
+        <div class="config__plan" onclick="openUnitForm('4 BHK')">
+          <svg class="plan-svg" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="250" fill="#efe7d8"/>
+            <g fill="none" stroke="#2a2420" stroke-width="3">
+              <path d="M20 30 L380 30 L380 130 L350 130 L350 220 L20 220 Z"/>
+              <rect x="20" y="30" width="60" height="28"/><rect x="280" y="30" width="100" height="28"/>
+              <rect x="350" y="58" width="30" height="72"/>
+            </g>
+            <g fill="none" stroke="#2a2420" stroke-width="1.7">
+              <line x1="100" y1="30" x2="100" y2="130"/><line x1="180" y1="30" x2="180" y2="130"/>
+              <line x1="260" y1="30" x2="260" y2="130"/><line x1="90" y1="130" x2="90" y2="220"/>
+              <line x1="190" y1="130" x2="190" y2="220"/><line x1="275" y1="130" x2="275" y2="220"/>
+              <line x1="325" y1="172" x2="325" y2="220"/><line x1="20" y1="130" x2="350" y2="130"/>
+              <line x1="100" y1="78" x2="180" y2="78"/><line x1="260" y1="78" x2="350" y2="78"/>
+              <line x1="190" y1="172" x2="350" y2="172"/>
+            </g>
+            <g fill="none" stroke="#3a2f24" stroke-width="0.9">
+              <rect x="32" y="65" width="58" height="48" rx="2"/><rect x="112" y="85" width="54" height="38" rx="2"/>
+              <rect x="195" y="45" width="52" height="35" rx="2"/><rect x="195" y="88" width="52" height="35" rx="2"/>
+              <rect x="95" y="200" width="80" height="14" rx="1"/><rect x="200" y="188" width="68" height="22" rx="2"/>
+              <circle cx="40" cy="172" r="10"/>
+            </g>
+            <g font-family="Outfit, sans-serif" font-size="5.5" fill="#8a6731" text-anchor="middle">
+              <text x="60" y="48">PRIMARY SUITE</text><text x="140" y="145">BEDROOM 2</text>
+              <text x="221" y="72">BEDROOM 3</text><text x="221" y="147">BEDROOM 4</text>
+              <text x="135" y="150">GRAND LIVING</text><text x="42" y="177">FOYER</text>
+              <text x="330" y="45">SKY DECK</text>
+            </g>
+          </svg>
+          <div class="lock-overlay">
+            <div class="lock-icon"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="1"/><path d="M8 11 V7 A 4 4 0 0 1 16 7 V11"/></svg></div>
+            <div class="unlock-label">Unlock Detailed Plan</div>
+          </div>
+        </div>
+        <div class="config__tag">Plan · C</div>
+        <h3>4 <em>BHK</em></h3>
+        <div class="size">Carpet 1,640 – 1,820 sq.ft.</div>
+        <ul>
+          <li>Private entrance foyer</li>
+          <li>Primary suite with dressing</li>
+          <li>Powder room &amp; staff quarter</li>
+          <li>Skyline-facing sky deck</li>
+        </ul>
+        <div class="config__price">Starting
+          <strong>₹ 3.09 Cr. <em>onwards</em></strong>
+        </div>
+        <button class="config__cta-btn" onclick="openUnitForm('4 BHK')">Request Floor Plan</button>
+        <p class="config__note">GST, AMC, IFMS &amp; other charges additional*</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MASTER PLAN -->
+<section class="masterplan" id="masterplan">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="ornament">
+        <span></span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        <span></span>
+      </div>
+      <div class="eyebrow">Site &amp; Layout</div>
+      <h2>The <em>master plan</em>, composed.</h2>
+      <p class="lead">Eleven towers oriented to catch the prevailing breeze, arranged around a central green spine with two clubhouses, a reflexology walk, sport courts, and a landscaped promenade.</p>
+    </div>
+
+    <div class="masterplan__wrap reveal">
+      <img class="masterplan__img" src="images/master-plan.jpg" alt="Godrej Ivara Kharadi Master Plan"
+           onerror="this.style.background='linear-gradient(135deg, #3a2f24, #1a1614)'; this.src='data:image/svg+xml;utf8,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 675%22&gt;&lt;rect width=%221200%22 height=%22675%22 fill=%22%231a1614%22/&gt;&lt;text x=%22600%22 y=%22340%22 text-anchor=%22middle%22 fill=%22%23b58a4a%22 font-family=%22serif%22 font-size=%2238%22 font-style=%22italic%22&gt;Master Plan Image&lt;/text&gt;&lt;text x=%22600%22 y=%22390%22 text-anchor=%22middle%22 fill=%22%23d6b787%22 font-family=%22sans-serif%22 font-size=%2216%22 letter-spacing=%226%22&gt;PLACE IN /images/master-plan.jpg&lt;/text&gt;&lt;/svg&gt;';"/>
+    </div>
+
+    <div class="masterplan__legend reveal">
+      <div class="legend-item">
+        <h5>Ground Level</h5>
+        <ul>
+          <li>Grand entry plaza</li>
+          <li>Drop-off arrival court</li>
+          <li>Tower entrance lobbies</li>
+          <li>Feature wall signage</li>
+        </ul>
+      </div>
+      <div class="legend-item">
+        <h5>Clubhouse One</h5>
+        <ul>
+          <li>Banquet halls · Ground</li>
+          <li>Café &amp; alfresco terrace</li>
+          <li>Squash court · Gym</li>
+          <li>Guest rooms (2 nos.)</li>
+        </ul>
+      </div>
+      <div class="legend-item">
+        <h5>Clubhouse Two</h5>
+        <ul>
+          <li>Badminton courts</li>
+          <li>Yoga &amp; wellness zone</li>
+          <li>Multi-activity arena</li>
+          <li>Library &amp; lounge</li>
+        </ul>
+      </div>
+      <div class="legend-item">
+        <h5>Podium Level</h5>
+        <ul>
+          <li>Main lap pool · Cabanas</li>
+          <li>Amphitheatre · Skate park</li>
+          <li>Pickleball · Half-court</li>
+          <li>Meditation deck · Jacuzzi</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AMENITIES -->
+<section class="amenities" id="amenities">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="ornament">
+        <span></span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="9"/></svg>
+        <span></span>
+      </div>
+      <div class="eyebrow">The Life Inside</div>
+      <h2>Amenities that earn the <em>word earned</em>.</h2>
+      <p class="lead">Not a list — a programme. Spaces designed for weekday wellness, weekend leisure, and the long quiet evenings in between.</p>
+    </div>
+
+    <div class="amenity-grid reveal">
+      <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M2 18 Q6 14, 12 18 T22 18"/><path d="M2 14 Q6 10, 12 14 T22 14"/></svg><div><h4>Lap Pool</h4><p>A 25-metre main pool with sun-shelf and cabanas.</p></div></div>
+      <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="8" width="18" height="8" rx="1"/><path d="M7 8 V4 M17 8 V4"/></svg><div><h4>Wellness Spa</h4><p>Steam, sauna, and therapy suites in a quiet wing.</p></div></div>
+      <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="6" r="2"/><path d="M12 8 V14 L8 20 M12 14 L16 20 M9 11 L15 11"/></svg><div><h4>Yoga Room</h4><p>Timber-floored studio opening to a garden.</p></div></div>
+      <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 17 L8 17 L8 7 L12 7 L12 17 L16 17 L16 10 L20 10 L20 17"/></svg><div><h4>Garden Gym</h4><p>Technogym-grade strength and cardio equipment.</p></div></div>
+      <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 20 L12 4 L21 20 Z"/><circle cx="12" cy="14" r="2"/></svg><div><h4>Two Clubhouses</h4><p>Library, lounge, banquet halls &amp; private dining.</p></div></div>
+      <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3 C 8 8, 8 14, 12 21 C 16 14, 16 8, 12 3 Z"/><path d="M12 10 V21"/></svg><div><h4>Forest Walk</h4><p>Reflexology trail through native-tree plantings.</p></div></div>
+      <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="8"/><path d="M4 12 H20 M12 4 V20"/></svg><div><h4>Sports Deck</h4><p>Squash, badminton, half-court basketball &amp; pickleball.</p></div></div>
+      <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="4" y="6" width="16" height="12" rx="1"/><path d="M8 10 L12 14 L16 10"/></svg><div><h4>Amphitheatre</h4><p>Open-air seating for evenings and community events.</p></div></div>
+      <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 20 Q6 12, 12 12 T18 20"/><circle cx="12" cy="7" r="3"/></svg><div><h4>Kids' Realm</h4><p>Themed play areas, crèche, skate park &amp; cricket box.</p></div></div>
+      <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"/><path d="M12 3 Q16 8, 16 12 T12 21 M3 12 H21"/></svg><div><h4>Meditation Deck</h4><p>Floating deck beside a reflective water feature.</p></div></div>
+      <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 12 Q12 4, 20 12 Q12 20, 4 12"/><circle cx="12" cy="12" r="2"/></svg><div><h4>Jacuzzi &amp; Pool Cabana</h4><p>Hot-water jacuzzi with lounge deck and cabana.</p></div></div>
+      <div class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 18 V8 L12 3 L20 8 V18 Z"/><path d="M10 18 V13 H14 V18"/></svg><div><h4>Seniors' Alcove</h4><p>Shaded seating, pavilions &amp; a reading corner.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location" id="location">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="ornament">
+        <span></span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2 C 7 2, 4 6, 4 11 C 4 17, 12 22, 12 22 C 12 22, 20 17, 20 11 C 20 6, 17 2, 12 2 Z"/><circle cx="12" cy="11" r="3"/></svg>
+        <span></span>
+      </div>
+      <div class="eyebrow">Connectivity</div>
+      <h2>Kharadi, <em>at just the right remove.</em></h2>
+      <p class="lead">Close enough to Pune's eastern business engine. Far enough to forget it when the gate closes behind you.</p>
+    </div>
+
+    <div class="loc-grid">
+      <div class="loc-map reveal">
+        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse">
+              <path d="M 25 0 L 0 0 0 25" fill="none" stroke="rgba(181,138,74,0.15)" stroke-width="0.5"/>
+            </pattern>
+          </defs>
+          <rect width="400" height="300" fill="url(#grid)"/>
+          <path d="M0 160 Q 100 140, 200 150 T 400 140" stroke="rgba(181,138,74,0.45)" stroke-width="2.5" fill="none"/>
+          <path d="M210 0 Q 195 100, 210 150 Q 220 220, 200 300" stroke="rgba(181,138,74,0.35)" stroke-width="2" fill="none"/>
+          <path d="M0 90 Q 120 110, 250 80 T 400 100" stroke="rgba(243,236,224,0.12)" stroke-width="1" fill="none" stroke-dasharray="3,4"/>
+          <path d="M60 0 Q 70 150, 90 300" stroke="rgba(243,236,224,0.12)" stroke-width="1" fill="none" stroke-dasharray="3,4"/>
+          <circle cx="90" cy="120" r="3" fill="#6b7a5a"/>
+          <text x="96" y="123" fill="rgba(243,236,224,0.55)" font-size="8" font-family="Outfit">EON IT Park</text>
+          <circle cx="280" cy="85" r="3" fill="#6b7a5a"/>
+          <text x="286" y="88" fill="rgba(243,236,224,0.55)" font-size="8" font-family="Outfit">WTC Kharadi</text>
+          <circle cx="340" cy="210" r="3" fill="#6b7a5a"/>
+          <text x="286" y="224" fill="rgba(243,236,224,0.55)" font-size="8" font-family="Outfit">Magarpatta</text>
+          <circle cx="70" cy="230" r="3" fill="#6b7a5a"/>
+          <text x="18" y="244" fill="rgba(243,236,224,0.55)" font-size="8" font-family="Outfit">Koregaon Park</text>
+          <circle cx="150" cy="50" r="3" fill="#6b7a5a"/>
+          <text x="156" y="53" fill="rgba(243,236,224,0.55)" font-size="8" font-family="Outfit">Airport</text>
+        </svg>
+        <div class="loc-pin">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14110f" stroke-width="2"><path d="M12 2 C 7 2, 4 6, 4 11 C 4 17, 12 22, 12 22 C 12 22, 20 17, 20 11 C 20 6, 17 2, 12 2 Z"/><circle cx="12" cy="11" r="2.5" fill="#14110f"/></svg>
+        </div>
+      </div>
+
+      <div class="loc-list reveal">
+        <h3>Measured in <em>minutes.</em></h3>
+        <p class="tagline">Indicative commute times under normal traffic conditions.</p>
+        <ul>
+          <li><span>EON IT Park</span><span>5 min</span></li>
+          <li><span>World Trade Centre</span><span>7 min</span></li>
+          <li><span>Phoenix Marketcity</span><span>10 min</span></li>
+          <li><span>Magarpatta City</span><span>15 min</span></li>
+          <li><span>Pune Airport</span><span>20 min</span></li>
+          <li><span>Koregaon Park</span><span>18 min</span></li>
+          <li><span>Symbiosis School</span><span>12 min</span></li>
+          <li><span>Columbia Asia Hospital</span><span>9 min</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band" id="enquiry">
+  <div class="container reveal">
+    <div class="ornament">
+      <span></span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z"/></svg>
+      <span></span>
+    </div>
+    <h2>Walk through Godrej Ivara, <em>before the world does.</em></h2>
+    <p>Pre-launch previews are by appointment. Leave your details or speak with our residences team directly.</p>
+    <a href="tel:+919665385775" class="cta-phone">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5 Q 3 3, 5 3 L 8 3 L 10 9 L 8 11 Q 12 17, 15 19 L 17 17 L 21 19 L 21 21 Q 21 23, 19 23 C 11 22, 4 15, 3 7 Z"/></svg>
+      +91 96653 85775
+    </a>
+  </div>
+</section>
+
+<!-- RERA BAND -->
+<section class="rera-band">
+  <div class="container">
+    <div class="rera-inner">
+      <div class="rera-qr">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fmaharera.maharashtra.gov.in%2F" alt="MahaRERA QR Code" />
+      </div>
+      <div class="rera-text">
+        <h4>MahaRERA Registered</h4>
+        <p>
+          The Project is registered as "Godrej Ivara" with MahaRERA Registration No.
+          <strong>PR/26000/2502426</strong>
+          Available at website: <a href="https://maharera.maharashtra.gov.in/" target="_blank" rel="noopener">maharera.maharashtra.gov.in</a>
+        </p>
+      </div>
+      <div class="rera-badge">
+        Developed by<br/>
+        <span style="font-size:1.4rem; color:var(--cream);">Godrej Properties</span>
+        <small style="margin-top:0.5rem;">125+ years of trust</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-about">
+        <a href="#top" class="brand">
+          <img class="brand__logo" src="images/godrej-logo.png" alt="Godrej Properties" onerror="this.style.display='none'; this.nextElementSibling.style.display='none';"/>
+          <span class="brand__sep"></span>
+          <div class="brand__name">IVARA<em>Kharadi</em></div>
+        </a>
+        <p style="margin-top:1.2rem;">A premium residential address in Kharadi, Pune by Godrej Properties. Marketed by a RERA-authorized real estate agent for the purpose of generating interest.</p>
+      </div>
+      <div>
+        <h5>Sitemap</h5>
+        <a href="#overview">Overview</a><br>
+        <a href="#configs">Residences</a><br>
+        <a href="#masterplan">Master Plan</a><br>
+        <a href="#amenities">Amenities</a><br>
+        <a href="#location">Location</a>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <p>Kharadi IT Park Road, Pune 411014</p>
+        <p><a href="tel:+919665385775">+91 96653 85775</a></p>
+        <p><a href="mailto:ibrandestates@gmail.com">ibrandestates@gmail.com</a></p>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer</strong>
+      The information provided on this website is intended solely for informational purposes and should not be interpreted as an offer for services or a sale. The project discussed on this site has not yet received RERA clearance or a registration number but is in the process of being registered with the Real Estate Regulatory Authority. The website aims only to generate interest through polling, and the name displayed is for branding purposes and may not reflect the final or official name of the project. We also want to clarify that we are not facilitating the sale or purchase of any property within this proposed or pending project. This website is managed by a RERA-authorized real estate agent. The images presented are for reference only and may not accurately depict the actual properties associated with the project awaiting approval by the Authority. Please note that we may share your data with RERA-registered developers for polling and interest-generation purposes. Additionally, we may send updates and information to the mobile number or email address you provide regarding your expressed interest. All content, design, and information on this website are protected by copyright and intellectual property rights. Any unauthorized use or reproduction may violate applicable laws. Thank you for visiting our site.
+    </div>
+
+    <div class="copy">
+      <span>© 2026 Godrej Ivara Kharadi · All rights reserved</span>
+      <span>MahaRERA No. PR/26000/2502426 · Marketed by RERA-authorized agent</span>
+    </div>
+  </div>
+</footer>
+
+<!-- UNIT PLAN FORM MODAL -->
+<div class="modal-backdrop" id="unitModal">
+  <div class="modal">
+    <button class="close-x" onclick="closeModal('unitModal')" aria-label="Close">✕</button>
+    <h3>Unlock the <em>detailed plan</em></h3>
+    <p class="sub">Leave your details — our residences team will share the full floor plan and pricing directly.</p>
+
+    <form action="https://formsubmit.co/ibrandestates@gmail.com" method="POST" onsubmit="return handleSubmit(event, this)">
+      <input type="hidden" name="_subject" value="Godrej Ivara Kharadi — Unit Plan Enquiry"/>
+      <input type="hidden" name="_template" value="table"/>
+      <input type="hidden" name="_captcha" value="false"/>
+      <input type="hidden" name="Form Source" value="Unit Plan Modal"/>
+
+      <div class="field">
+        <label>Full name</label>
+        <input type="text" name="Name" required placeholder="e.g. Ananya Deshpande" />
+      </div>
+      <div class="field">
+        <label>Phone number</label>
+        <input type="tel" name="Phone" required pattern="[0-9+\s\-]{7,}" placeholder="+91 ..." />
+      </div>
+      <div class="field">
+        <label>Interest for unit</label>
+        <div class="radio-group">
+          <input type="radio" name="Interest" value="2 BHK" id="r2" />
+          <label for="r2">2 BHK</label>
+          <input type="radio" name="Interest" value="3 BHK" id="r3" />
+          <label for="r3">3 BHK</label>
+          <input type="radio" name="Interest" value="4 BHK" id="r4" />
+          <label for="r4">4 BHK</label>
+        </div>
+      </div>
+      <button class="btn-primary" type="submit">Submit</button>
+      <p class="consent" style="text-align:center;">By submitting, you consent to be contacted by our team regarding Godrej Ivara Kharadi.</p>
+    </form>
+  </div>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div class="modal-backdrop" id="successModal">
+  <div class="modal success-modal">
+    <button class="close-x" onclick="closeModal('successModal')" aria-label="Close">✕</button>
+    <div class="icon">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12 L10 17 L19 7"/></svg>
+    </div>
+    <h3>Thank you, <em>your interest is noted.</em></h3>
+    <p class="sub">A member of our residences team will reach out shortly to schedule a preview.</p>
+    <button onclick="closeModal('successModal')">Close</button>
+  </div>
+</div>
+
+<script>
+  // Scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Hero slider
+  const slides = document.querySelectorAll('#heroSlides .hero__slide');
+  const dots = document.querySelectorAll('#heroDots .hero__dot');
+  let current = 0;
+  let sliderTimer;
+  function goToSlide(i) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = i;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+  function nextSlide() { goToSlide((current + 1) % slides.length); }
+  function startSlider() { sliderTimer = setInterval(nextSlide, 5500); }
+  function restartSlider() { clearInterval(sliderTimer); startSlider(); }
+  dots.forEach((dot, i) => dot.addEventListener('click', () => { goToSlide(i); restartSlider(); }));
+  startSlider();
+
+  // Unit plan modal
+  function openUnitForm(preferred) {
+    const modal = document.getElementById('unitModal');
+    // Pre-select radio if a specific BHK was clicked
+    if (preferred) {
+      const rid = preferred === '2 BHK' ? 'r2' : preferred === '3 BHK' ? 'r3' : preferred === '4 BHK' ? 'r4' : null;
+      if (rid) {
+        document.getElementById(rid).checked = true;
+      }
+    } else {
+      ['r2','r3','r4'].forEach(id => document.getElementById(id).checked = false);
+    }
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  // Close on backdrop click
+  document.querySelectorAll('.modal-backdrop').forEach(bd => {
+    bd.addEventListener('click', (e) => {
+      if (e.target === bd) closeModal(bd.id);
+    });
+  });
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-backdrop.open').forEach(m => closeModal(m.id));
+    }
+  });
+
+  // Form submit — uses fetch to keep user on page, shows success modal
+  function handleSubmit(event, form) {
+    event.preventDefault();
+    const data = new FormData(form);
+    const submitBtn = form.querySelector('button[type=submit]');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending…';
+    submitBtn.disabled = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(res => {
+      if (res.ok) {
+        form.reset();
+        // close any open modal first
+        document.querySelectorAll('.modal-backdrop.open').forEach(m => m.classList.remove('open'));
+        document.getElementById('successModal').classList.add('open');
+        document.body.style.overflow = 'hidden';
+      } else {
+        alert('Sorry — something went wrong. Please call us at +91 96653 85775.');
+      }
+    }).catch(() => {
+      alert('Sorry — something went wrong. Please call us at +91 96653 85775.');
+    }).finally(() => {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    });
+    return false;
+  }
+
+  // Compact nav on scroll
+  const nav = document.querySelector('.nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) nav.style.padding = '0.6rem 0';
+    else nav.style.padding = '1rem 0';
+  });
+</script>
+
+</body>
+</html>
